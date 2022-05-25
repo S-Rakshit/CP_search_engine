@@ -182,28 +182,6 @@ class TfIdf {
     return (numOccurences * 1.0 / (doc.length + 1))
   }
 
-  /*
-  * Calculates the inverse document frequency (idf) of a term in a given document
-  * idf = log(number of documents where the term appears / term frequency)
-  */
-
-//   calculateInverseDocumentFrequency(term) {
-//     if (corpus_length == 0) return -1;
-//     let numDocs = 0;
-//     for (let i = 0; i< this.corpus.length; i++){
-//       for (let j = 0; j < this.corpus[i].length; j++) {
-//         if (this.corpus[i][j] == term.toLowerCase()){
-//           numDocs++;
-//           break;
-//         }
-//       }
-//     }
-//     return Math.log((this.corpus.length) / (numDocs + 1)) + 1;
-//   }
-
-  /*
-  * Creates a vector of the idf of the query term in a given document
-  */
 
   createIdfModel(query) {
     query = Array.isArray(query) ? query: query.split(" ");
@@ -356,12 +334,8 @@ app.get("/search", (req, res) => {
 
   //TF-IDF ALgo
 
-  //   let cnt = 0;
-  //   for (let i = 0; i < 2000; i++) {
-  //     for (let j = 0; j < 1000; j++) {
-  //       cnt++;
-  //     }
-  //   }
+
+    
   
   // var tokenizer2 = new natural.WordTokenizer(); 
   // var tokens2 = tokenizer2.tokenize(question);
