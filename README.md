@@ -6,4 +6,4 @@
 3. Then run the following command
 
 > npm install
->> npm start
+> npm start
